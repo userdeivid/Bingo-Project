@@ -6,7 +6,15 @@
 try:
     import random
     import os
-    import pyttsx3
+    import time
+    try:
+        import pyttsx3
+    except ModuleNotFoundError:
+        print('Instale pyttsx3 -> pip install pyttsx3')
+        print('Para poder recibir numeros por voz.')
+        time.sleep(5)
+
+
     from colors import *
 except ModuleNotFoundError:
     with open('requirements.txt', 'w') as file:
